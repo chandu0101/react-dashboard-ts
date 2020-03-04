@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
-type RouteWithLayoutProps = { component: any; layout: any; path?: string };
+type RouteWithLayoutProps = {
+  component: any;
+  layout: any;
+  path?: string;
+  exact: boolean;
+};
 
-export const RouteWithLayout: React.FC<RouteWithLayoutProps> = ({
+const RouteWithLayout: React.FC<RouteWithLayoutProps> = ({
   layout: Layout,
   component,
   ...rest
@@ -19,3 +24,5 @@ export const RouteWithLayout: React.FC<RouteWithLayoutProps> = ({
     />
   );
 };
+
+export default RouteWithLayout;
